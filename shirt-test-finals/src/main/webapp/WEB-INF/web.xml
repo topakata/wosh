@@ -1,0 +1,43 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>FormAccessFilter</filter-name>
+  	<display-name>FormAccessFilter</display-name>
+  	<description></description>
+  	<filter-class>filters.FormAccessFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>FormAccessFilter</filter-name>
+  	<url-pattern>/FormAccessFilter</url-pattern>
+  </filter-mapping>
+  <!-- <filter-mapping>
+  	<filter-name>FormAccessFilter</filter-name>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  </filter-mapping> -->
+
+ 
+  <servlet>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<display-name>RegistrationServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ParticipantsServlet</servlet-name>
+  	<display-name>ParticipantsServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.ParticipantsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RegistrationServlet</servlet-name>
+  	<url-pattern>/RegistrationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ParticipantsServlet</servlet-name>
+  	<url-pattern>/ParticipantsServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
